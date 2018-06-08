@@ -1,0 +1,13 @@
+# umi
+.umi
+.umi-production
+
+node_modules
+package-lock.json
+yarn.lock
+npm-debug.log.*
+npm-debug.log
+.vscode
+.DS_Store
+.idea/
+dist

@@ -1,0 +1,33 @@
+{
+  "name": "myumi",
+  "version": "1.0.0",
+  "description": "使用umi",
+  "main": ".umirc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "API_ENV=test PORT=8866 umi dev",
+    "build:test": "API_ENV=test umi build",
+    "build:prod": "API_ENV=prod umi build"
+  },
+  "keywords": [
+    "umi",
+    "react",
+    "antd",
+    "dva"
+  ],
+  "author": "huangketong",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.2",
+    "nprogress": "^0.2.0",
+    "path-to-regexp": "^2.2.1",
+    "prop-types": "^15.6.1",
+    "qs": "^6.5.0",
+    "rc-queue-anim": "^1.4.1",
+    "umi": "^1.3.5",
+    "umi-plugin-dva": "^0.4.0",
+    "umi-plugin-routes": "^0.1.5"
+  }
+}
