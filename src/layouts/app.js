@@ -20,6 +20,7 @@ const App = ({
     const {
         navOpenKeys,
         activeKey,
+        userName,
     } = app;
 
     const { href, pathname } = window.location;
@@ -66,6 +67,7 @@ const App = ({
         logout() {
             dispatch({ type: 'app/logout', payload: { account: 'user' } });
         },
+        userName,
     };
 
     // 如果是要渲染鞥路页面的话就不在渲染Layout

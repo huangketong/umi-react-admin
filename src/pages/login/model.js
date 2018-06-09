@@ -5,18 +5,20 @@ import { queryURL } from '../../utils';
 export default {
     namespace: 'login',
     state: {
-        userName: '',
     },
 
     effects: {
         *login({ payload }, { put }) {
             const data = yield loginService.login(payload);
-
+            
             if (data.success) {
+                
                 // 登录成功后把 token 保存下来
-                const token = data.token;
-                // yield put({type: 'updateState', payload: {userName: data}})
+                const token = data.data.token;
+                const userName = data.data.userName;
+                
                 localStorage.setItem('token', token);
+                localStorage.setItem('userName', userName);
 
                 const from = queryURL('from');
                 yield put({ type: 'app/query' });

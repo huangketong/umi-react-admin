@@ -6,6 +6,7 @@ const SubMenu = Menu.SubMenu;
 
 const MyHeader = ({
     logout,
+    userName,
 }) => {
 
     let handleClickMenu = function(e) {
@@ -19,7 +20,7 @@ const MyHeader = ({
             <SubMenu style={{
                 float: 'right',
             }} title={<span> <Icon type="user" />
-                {'这样不好吧'} </span>}>
+                {userName} </span>}>
                 {/* <Menu.Item key="changePWD">
                     修改密码
                 </Menu.Item> */}

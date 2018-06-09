@@ -9,18 +9,22 @@ export default {
         activeKey: '',
         activeRoute: '',
         navOpenKeys: JSON.parse(localStorage.getItem("navOpenKeys")) || [],
+        userName: '',
     },
     subscriptions: {
         setup({dispatch}) {
             dispatch({
                 type: 'query',
+                payload: {}
             });
         },
     },
     effects: {
-        *query({ put }) {
+        *query({payload},{ put }) {
             // 确认用户是否登录---尝试获取登录留下的token
-            let token = localStorage.getItem('token');
+            const token = localStorage.getItem('token');
+            const userName = localStorage.getItem('userName');
+            yield put({type: 'updateState', payload: {userName: userName}})
             const location = window.location; 
             if ( token) {
                 if (location.pathname === '/login') {
