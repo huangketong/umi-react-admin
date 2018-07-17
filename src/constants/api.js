@@ -2,7 +2,7 @@ const APIV_DEV = '';  // 开发环境的阿里云接口
 const APIV_TEST = ''; // 测试环境的阿里云接口
 const APIV_PROD = ''; // 生产环境的阿里云接口
 let API_GATEWAY = '';
-const API_MOCK = 'http://localhost:8866';
+const API_MOCK = 'http://localhost:8899';
 
 if (process.env.NODE_ENV !== 'production') { // 开发环境
     console.log('now environment is dev');

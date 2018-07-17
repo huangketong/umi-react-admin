@@ -25,6 +25,7 @@ const Menus = ({ handleClicksideMenu, navOpenKeys, changeOpenKeys, sideMenu, act
                             key={item.id}
                             title={<span>
                                 {item.icon_id && <Icon type={item.icon_id} />}
+                                {item.name}
                             </span>}
                         >
                             {getMenus(item.children)}

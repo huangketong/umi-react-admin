@@ -15,17 +15,17 @@ export default {
         setup({dispatch}) {
             dispatch({
                 type: 'query',
-                payload: {}
+                payload: {},
             });
         },
     },
     effects: {
-        *query({payload},{ put }) {
+        *query({payload}, { put }) {
             // 确认用户是否登录---尝试获取登录留下的token
             const token = localStorage.getItem('token');
             const userName = localStorage.getItem('userName');
-            yield put({type: 'updateState', payload: {userName: userName}})
-            const location = window.location; 
+            yield put({type: 'updateState', payload: {userName: userName}});
+            const location = window.location;
             if ( token) {
                 if (location.pathname === '/login') {
                     yield put(routerRedux.push({pathname: '/dashboard'}));
@@ -47,14 +47,14 @@ export default {
             } else {
                 throw (data);
             }
-        }, 
+        },
     },
     reducers: {
         updateState(state, { payload }) {
             return {
                 ...state,
-                ...payload
-            }
-        }
-    }
-}
+                ...payload,
+            };
+        },
+    },
+};

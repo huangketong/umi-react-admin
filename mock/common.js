@@ -14,4 +14,4 @@ export default {
             userName: '这样不好吧',
         });
     },
-}
+};

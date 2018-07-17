@@ -8,6 +8,7 @@ import { MyLayout } from '../components';
 import { menus } from '../utils/menus';
 import pathToRegexp from 'path-to-regexp';
 import styles from './app.less';
+import { footerText, adminName } from '../constants/common';
 const { Header, Content, Footer, Sider } = Layout;
 const { Menu, MyHeader } = MyLayout;
 
@@ -75,7 +76,7 @@ const App = ({
     if (isLoginPage.includes(pathname)) {
         return (<div>
             {children}
-        </div>)
+        </div>);
     }
 
     return (
@@ -84,7 +85,7 @@ const App = ({
                 breakpoint="lg"
                 collapsedWidth="0"
             >
-                <div className={styles.logo} />
+                <div className={styles.logo} >{adminName}</div>
                 <Menu {...menusProps} />
             </Sider>
             <Layout>
@@ -97,7 +98,7 @@ const App = ({
                     </div>
                 </Content>
                 <Footer style={{ textAlign: 'center' }}>
-                    Ant Design ©2016 Created by Ant UED
+                    {footerText}
                 </Footer>
             </Layout>
         </Layout>
