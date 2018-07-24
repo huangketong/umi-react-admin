@@ -12,7 +12,7 @@ const MyHeader = ({
     let handleClickMenu = function(e) {
         if (e.key === 'logout') {
             logout();
-        } 
+        }
     };
 
     return (

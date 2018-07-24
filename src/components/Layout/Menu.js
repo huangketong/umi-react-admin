@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Menu, Icon } from 'antd';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import { arrayToTree, bubbleSort } from '../../utils';
 const SubMenu = Menu.SubMenu;
 

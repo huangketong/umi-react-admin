@@ -29,7 +29,7 @@ const Login = ({
                 <img alt={'logo'} src={require('../../assets/bangsheng.png')} />
                 <span>{config.name}</span>
             </div> */}
-            
+
             <form>
                 <FormItem hasFeedback>
                     {getFieldDecorator('account', {

@@ -10,13 +10,13 @@ export default {
     effects: {
         *login({ payload }, { put }) {
             const data = yield loginService.login(payload);
-            
+
             if (data.success) {
-                
+
                 // 登录成功后把 token 保存下来
                 const token = data.data.token;
                 const userName = data.data.userName;
-                
+
                 localStorage.setItem('token', token);
                 localStorage.setItem('userName', userName);
 
@@ -24,9 +24,9 @@ export default {
                 yield put({ type: 'app/query' });
 
                 if (from) {
-                    yield put(routerRedux.push({pathname: from}));
+                    yield put(routerRedux.push({ pathname: from }));
                 } else {
-                    yield put(routerRedux.push({pathname: '/dashboard'}));
+                    yield put(routerRedux.push({ pathname: '/dashboard' }));
                 }
             }
 

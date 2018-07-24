@@ -11,12 +11,12 @@ const NET_ERR_CODE = 600; // 网络请求错误的编码
  * 请求函数
  */
 export default function request({ method, data, url, headers }) {
-    
+
     // 调用下面封装的fetch函数
     return fetch({ method, data, url, headers }).then((response) => {
         const { statusText, status } = response;
         let data = response.data;
-      
+
         if (Number(status) === FETCH_SUCCESS_CODE) {
             return {
                 success: true,

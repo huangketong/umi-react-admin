@@ -20,4 +20,13 @@ if (process.env.NODE_ENV !== 'production') { // 开发环境
 module.exports = {
     user_login: `${API_GATEWAY}/api/account/v2/login`,
     user_logout: `${API_GATEWAY}/api/account/v2/logout`,
+
+    schedulerDetailQuery: '',
+    addTask: '',
+    updateTask: '',
+    auditTask: '',
+    deleteTask: '',
+    enableTask: '',
+    executeTask: '',
+    hisTask: '',
 };
