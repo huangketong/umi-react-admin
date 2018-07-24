@@ -1,4 +1,6 @@
-export const taskTypeList = []; // 任务类型数据字典
+export const taskTypeList = [
+    {dict_no: 'sys_task', dict_name: '系统任务'},
+]; // 任务类型数据字典
 export const sysTypeList = []; // 系统类型数据字典
 export const isRecoveryList = []; // 是否再次执行数据字典
 export const isSmsList = []; // 是否发送短信数据字典
