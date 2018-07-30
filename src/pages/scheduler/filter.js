@@ -49,7 +49,7 @@ const Filter = ({
                 <Col {...three_col_layout}>
                     <FormItem>
                         <Button type='primary' onClick={handleSearch}>查询</Button>
-                        <Button type='primary' onClick={handleAdd} style={{ marginLeft: 12 }}>查询</Button>
+                        <Button type='primary' onClick={handleAdd} style={{ marginLeft: 12 }}>新增</Button>
                     </FormItem>
                 </Col>
             </Row>

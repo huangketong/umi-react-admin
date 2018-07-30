@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Form, Modal } from 'antd';
-import './index.less';
+import styles from   './index.less';
 import BaseConfig from './BaseConfig';
 import PropertyConfig from './PropertyConfig';
 
@@ -141,7 +141,7 @@ const Pannel = ({
             cancelText="取消"
             maskClosable={false}
             wrapClassName={'vertical-center-modal'}
-            className={className}
+            className={styles.modalWidth}
         >
             <BaseConfig {...BaseProps}/>
             <PropertyConfig {...propertyProps}/>
