@@ -21,121 +21,121 @@ class PropertyConfig extends React.Component {
         };
     }
 
-        columns = [
-            {
-                title: '序号',
-                render(text, record, index) {
-                    return index + 1;
-                },
-            }, {
-                title: '属性名称',
-                dataIndex: 'property_key',
-                render: (text, record, index) => {
-                    const { isEdit, id } = record;
-                    return (
-                        !isEdit ?
-                            <span>{text ? text : '/'}</span>
-                            :
-                            <Input defaultValue={text} onChange={(e) => this.handleEditChange(e, { key: 'property_key', index, id })} />
-                    );
-                },
-            }, {
-                title: '属性值',
-                dataIndex: 'property_value',
-                render: (text, record, index) => {
-                    const { isEdit, id } = record;
-                    return (
-                        !isEdit ?
-                            <span>{text ? text : '/'}</span>
-                            :
-                            <Input defaultValue={text} onChange={(e) => this.handleEditChange(e, { key: 'property_value', index, id })} />
-                    );
-                },
-            }, {
-                title: '值类型',
-                dataIndex: 'value_type',
-                render: (text, record, index) => {
-                    const { isEdit, id } = record;
-                    const { valueTypeList } = this.props;
-                    return (
-                        !isEdit ?
-                            <span>{text ? text : '/'}</span>
-                            :
-                            <Select style={{ width: 220 }}
-                                id='value_type'
-                                onChange={(value) => { this.handleChangeSubjectList(value, 'value_type', index, id); }}
-                                disabled={!isEdit}
-                                placeholder='请选择'
-                            >
-                                {
-                                    valueTypeList && valueTypeList.map((item, index) => <Option key={index} value={item.dict_no}>{item.dict_name}</Option>)
-                                }
-                            </Select>
-                    );
-                },
-            }, {
-                title: '属性描述',
-                dataIndex: 'property_name',
-                render: (text, record, index) => {
-                    const { isEdit, id } = record;
-                    return (
-                        !isEdit ?
-                            <span>{text ? text : '/'}</span>
-                            :
-                            <Input defaultValue={text} onChange={(e) => this.handleEditChange(e, { key: 'property_name', index, id })} />
-                    );
-                },
-            }, {
-                title: '备注',
-                dataIndex: 'remark',
-                render: (text, record, index) => {
-                    const { isEdit, id } = record;
-                    return (
-                        !isEdit ?
-                            <span>{text ? text : '/'}</span>
-                            :
-                            <Input defaultValue={text} onBlur={(e) => this.handleEditChange(e, { key: 'remark', index, id })} />
-                    );
-                },
+    columns = [
+        {
+            title: '序号',
+            render(text, record, index) {
+                return index + 1;
             },
-            {
-                title: '操作',
-                render: (text, record, index) => {
-                    const {
-                        isEdit, id,
-                    } = record;
-                    const {
-                        isApprove,
-                        cancelApprove,
-                        baseListData,
-                    } = this.props;
-                    if ( !isApprove && !cancelApprove) {
-                        return (
-
-                            <span>
-                                {
-                                    !isEdit ?
-                                        <span>
-                                            <a href="#" onClick={(e) => this.handleEdit(e, { baseListData, index, id, isEdit: true })}>编辑</a>
-                                            <span className={styles.ant_divider} />
-                                            <a href="#" onClick={(e) => this.handleDelete(e, { baseListData, record, index, id })}>删除</a>
-                                        </span>
-                                        :
-                                        <span>
-                                            <a href="#" onClick={(e) => this.handleEditSave(e, { baseListData, record, index, id, isEdit: false })}>保存</a>
-                                            <span className={styles.ant_divider} />
-                                            <a href="#" onClick={(e) => this.handleEditCancel(e, { baseListData, index, id, isEdit: false })}>取消</a>
-                                            <span className={styles.ant_divider} />
-                                            <a href="#" onClick={(e) => this.handleDelete(e, { baseListData, record, index, id })}>删除</a>
-                                        </span>
-                                }
-                            </span>
-
-                        );
-                    }
-                },
+        }, {
+            title: '属性名称',
+            dataIndex: 'property_key',
+            render: (text, record, index) => {
+                const { isEdit, id } = record;
+                return (
+                    !isEdit ?
+                        <span>{text ? text : '/'}</span>
+                        :
+                        <Input defaultValue={text} onChange={(e) => this.handleEditChange(e, { key: 'property_key', index, id })} />
+                );
             },
-        ]
+        }, {
+            title: '属性值',
+            dataIndex: 'property_value',
+            render: (text, record, index) => {
+                const { isEdit, id } = record;
+                return (
+                    !isEdit ?
+                        <span>{text ? text : '/'}</span>
+                        :
+                        <Input defaultValue={text} onChange={(e) => this.handleEditChange(e, { key: 'property_value', index, id })} />
+                );
+            },
+        }, {
+            title: '值类型',
+            dataIndex: 'value_type',
+            render: (text, record, index) => {
+                const { isEdit, id } = record;
+                const { valueTypeList } = this.props;
+                return (
+                    !isEdit ?
+                        <span>{text ? text : '/'}</span>
+                        :
+                        <Select style={{ width: 220 }}
+                            id='value_type'
+                            onChange={(value) => { this.handleChangeSubjectList(value, 'value_type', index, id); }}
+                            disabled={!isEdit}
+                            placeholder='请选择'
+                        >
+                            {
+                                valueTypeList && valueTypeList.map((item, index) => <Option key={index} value={item.dict_no}>{item.dict_name}</Option>)
+                            }
+                        </Select>
+                );
+            },
+        }, {
+            title: '属性描述',
+            dataIndex: 'property_name',
+            render: (text, record, index) => {
+                const { isEdit, id } = record;
+                return (
+                    !isEdit ?
+                        <span>{text ? text : '/'}</span>
+                        :
+                        <Input defaultValue={text} onChange={(e) => this.handleEditChange(e, { key: 'property_name', index, id })} />
+                );
+            },
+        }, {
+            title: '备注',
+            dataIndex: 'remark',
+            render: (text, record, index) => {
+                const { isEdit, id } = record;
+                return (
+                    !isEdit ?
+                        <span>{text ? text : '/'}</span>
+                        :
+                        <Input defaultValue={text} onBlur={(e) => this.handleEditChange(e, { key: 'remark', index, id })} />
+                );
+            },
+        },
+        {
+            title: '操作',
+            render: (text, record, index) => {
+                const {
+                    isEdit, id,
+                } = record;
+                const {
+                    isApprove,
+                    cancelApprove,
+                    baseListData,
+                } = this.props;
+                if (!isApprove && !cancelApprove) {
+                    return (
+
+                        <span>
+                            {
+                                !isEdit ?
+                                    <span>
+                                        <a href="#" onClick={(e) => this.handleEdit(e, { baseListData, index, id, isEdit: true })}>编辑</a>
+                                        <span className={styles.ant_divider} />
+                                        <a href="#" onClick={(e) => this.handleDelete(e, { baseListData, record, index, id })}>删除</a>
+                                    </span>
+                                    :
+                                    <span>
+                                        <a href="#" onClick={(e) => this.handleEditSave(e, { baseListData, record, index, id, isEdit: false })}>保存</a>
+                                        <span className={styles.ant_divider} />
+                                        <a href="#" onClick={(e) => this.handleEditCancel(e, { baseListData, index, id, isEdit: false })}>取消</a>
+                                        <span className={styles.ant_divider} />
+                                        <a href="#" onClick={(e) => this.handleDelete(e, { baseListData, record, index, id })}>删除</a>
+                                    </span>
+                            }
+                        </span>
+
+                    );
+                }
+            },
+        },
+    ]
 
 
     setDelete = ({ baseListData, record }) => {
@@ -264,7 +264,7 @@ class PropertyConfig extends React.Component {
     }
 
     render() {
-        const { baseListData, isApprove, cancelApprove} = this.props;
+        const { baseListData, isApprove, cancelApprove } = this.props;
         return (
             <div className={styles.content}>
                 <div className={styles.top}>

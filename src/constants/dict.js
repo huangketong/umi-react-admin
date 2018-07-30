@@ -7,5 +7,4 @@ export const isSmsList = []; // 是否发送短信数据字典
 export const addressTypeList = []; // 地址类型数据字典
 export const execFlagList = []; // 执行标识数据字典
 export const taskStatusList = []; // 任务状态
-export const properties = []; // 任务属性列表
 export const valueTypeList = []; // 值类型数据字典

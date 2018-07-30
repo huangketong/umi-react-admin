@@ -8,7 +8,7 @@ import Pannel from './Pannel';
 import { paginationConfig } from '../../constants/pagination';
 import {
     taskTypeList, sysTypeList, isRecoveryList, isSmsList, addressTypeList,
-    execFlagList, properties, taskStatusList, valueTypeList,
+    execFlagList, taskStatusList, valueTypeList,
 } from '../../constants/dict';
 
 const Scheduler = ({
@@ -21,6 +21,7 @@ const Scheduler = ({
         visible, changeRecord,
         isEdit, isApprove, cancelApprove,
         hisList, hisTotal, expandedRowKey, hisParams, selectedRows, selectedRowKeys, calledRow,
+        properties,
     } = scheduler;
     const pagination = paginationConfig(total, parameters, dispatch, 'scheduler/getDataList', 'scheduler/updateParameters');
     const hispagination = paginationConfig(hisTotal, hisParams, dispatch, 'scheduler/queryHisTask', 'scheduler/updatePaginationHisParams');

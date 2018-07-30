@@ -18,7 +18,7 @@ export default {
         },
         total: 0,
         list: [],
-
+        properties: [], // 任务属性列表
         detailInfo: {}, // 详细信息
         isEdit: false,
         isApprove: false,

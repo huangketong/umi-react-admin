@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Form, Modal } from 'antd';
-import styles from   './index.less';
+import styles from './index.less';
 import BaseConfig from './BaseConfig';
 import PropertyConfig from './PropertyConfig';
 
@@ -47,7 +47,7 @@ const Pannel = ({
     };
 
     const propertyProps = {
-        baseListData:properties,
+        baseListData: properties,
         dispatch,
         changeRecord,
         valueTypeList,
@@ -98,8 +98,8 @@ const Pannel = ({
                                 ...changeRecord,
                                 ...values,
                                 org_code: fields.orgAndProduct[0] ? fields.orgAndProduct[0] : changeRecord.org_code,
-                                product_code:fields.orgAndProduct[1] ? fields.orgAndProduct[1] : changeRecord.product_code,
-                                task_properties:properties,
+                                product_code: fields.orgAndProduct[1] ? fields.orgAndProduct[1] : changeRecord.product_code,
+                                task_properties: properties,
                             },
                         });
                     }
@@ -109,9 +109,9 @@ const Pannel = ({
                         type: 'scheduler/addTask',
                         payload: {
                             ...values,
-                            org_code:fields.orgAndProduct[0],
-                            product_code:fields.orgAndProduct[1],
-                            task_properties:properties,
+                            org_code: fields.orgAndProduct[0],
+                            product_code: fields.orgAndProduct[1],
+                            task_properties: properties,
                         },
                     });
                 }
@@ -126,7 +126,7 @@ const Pannel = ({
                 visible: false,
                 isApprove: false,
                 cancelApprove: false,
-                properties:[],
+                properties: [],
             },
         });
     };
@@ -143,8 +143,8 @@ const Pannel = ({
             wrapClassName={'vertical-center-modal'}
             className={styles.modalWidth}
         >
-            <BaseConfig {...BaseProps}/>
-            <PropertyConfig {...propertyProps}/>
+            <BaseConfig {...BaseProps} />
+            <PropertyConfig {...propertyProps} />
         </Modal>
     );
 
