@@ -24,6 +24,7 @@ export default {
     },
     routes: routes,
     targets: { ie: 9 },
+    hash: true,
     plugins: [
         [
             "umi-plugin-react",
