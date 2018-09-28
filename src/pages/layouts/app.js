@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import NProgress from 'nprogress';
 import { connect } from 'dva';
 import { Layout } from 'antd';
-import { MyLayout } from '../components';
-import { menus } from '../utils/menus';
+import { MyLayout } from '../../components';
+import { menus } from '../../utils/menus';
 import pathToRegexp from 'path-to-regexp';
 import styles from './app.less';
-import { footerText, adminName } from '../constants/common';
+import { footerText, adminName } from '../../constants/common';
 const { Header, Content, Footer, Sider } = Layout;
 const { Menu, MyHeader } = MyLayout;
 

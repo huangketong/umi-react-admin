@@ -6,7 +6,7 @@ export const menus = [
         icon_id: 'dashboard',
         level: '1',
         route: '/dashboard',
-        showSide: true,
+        show_side: true,
     },
     {
         id: '2',
@@ -15,6 +15,6 @@ export const menus = [
         icon_id: 'database',
         level: '1',
         route: '/scheduler',
-        showSide: true,
+        show_side: true,
     },
 ];

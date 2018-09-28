@@ -1,4 +1,4 @@
-import { logout } from '../services/app';
+import { logout } from '../../services/app';
 import { routerRedux } from 'dva/router';
 
 export default {
