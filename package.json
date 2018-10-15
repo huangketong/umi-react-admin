@@ -28,10 +28,10 @@
     "rc-queue-anim": "^1.4.1"
   },
   "devDependencies": {
-    "antd": "^3.9.3",
+    "antd": "^3.10.1",
     "cross-env": "^5.2.0",
-    "svg-sprite-loader": "^4.1.1",
-    "umi": "^2.1.0",
-    "umi-plugin-react": "^1.1.0"
+    "svg-sprite-loader": "^3.9.2",
+    "umi": "^2.1.2",
+    "umi-plugin-react": "^1.1.1"
   }
 }
