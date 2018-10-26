@@ -1,3 +1,5 @@
+import os from 'os';
+
 const routes = [
     {
         path: "/",
@@ -29,9 +31,10 @@ export default {
         [
             "umi-plugin-react",
             {
-                dva: true,
+                dva: {
+                    hmr: true,
+                },
                 antd: true,
-                chunks: ['vendors', 'umi'],
                 routes: {
                     exclude: [
                         /model\.(j|t)sx?$/,
@@ -41,6 +44,11 @@ export default {
                         /services\//
                     ]
                 },
+                locale: {
+                    enable: true, // default false
+                    default: 'zh-CN', // default zh-CN
+                    baseNavigator: true, // default true, when it is true, will use `navigator.language` overwrite default
+                },
                 dynamicImport: {
                     webpackChunkName: true,
                     loadingComponent: "./PageLoadingComponent.js"
@@ -48,7 +56,8 @@ export default {
                 dll: {
                     include: ["dva", "dva/router", "dva/saga", "dva/fetch"],
                     exclude: ["@babel/runtime"]
-                }
+                },
+                hardSource: os.platform() === 'darwin',
             }
         ]
     ],

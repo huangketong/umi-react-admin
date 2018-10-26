@@ -1,52 +1,93 @@
-.form {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -160px 0 0 -160px;
-    width: 320px;
-    height: 320px;
-    padding: 36px;
-    box-shadow: 0 0 100px rgba(0,0,0,.08);
-  
-    button {
-      width: 100%;
-    }
-  
-    p {
-      color: rgb(204, 204, 204);
-      text-align: center;
-      margin-top: 16px;
-  
-      span {
-        &:first-child {
-          margin-right: 16px;
-        }
+
+.bg {
+  background: #f0f2f5;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: auto;
+}
+.formContent {
+  padding: 112px 0 24px;
+  flex: 1 1;
+
+  .form {
+      :global .ant-form-item {
+          margin-bottom: 28px !important;
       }
-    }
+
+      width: 436px;
+      height: 416px;
+      padding: 36px;
+      box-shadow: 0 0 100px rgba(0, 0, 0, 0.08);
+      margin: 0 auto;
+
+      button {
+          width: 100%;
+      }
+
+      p {
+          color: rgb(204, 204, 204);
+          text-align: center;
+          margin-top: 16px;
+
+          span {
+              &:first-child {
+                  margin-right: 16px;
+              }
+          }
+      }
   }
-  
+
   .logo {
-    text-align: center;
-    height: 40px;
-    line-height: 40px;
-    cursor: pointer;
-    margin-bottom: 24px;
-  
-    img {
-      width: 40px;
-      margin-right: 8px;
-    }
-  
-    span {
-      vertical-align: text-bottom;
-      font-size: 16px;
-      text-transform: uppercase;
-      display: inline-block;
-    }
+      text-align: center;
+      height: 40px;
+      line-height: 40px;
+      cursor: pointer;
+      margin-bottom: 75px;
+
+      img {
+          width: 40px;
+          margin-right: 8px;
+      }
+
+      span {
+          vertical-align: text-bottom;
+          text-transform: uppercase;
+          display: inline-block;
+          width: 198px;
+          height: 33px;
+          font-size: 33px;
+          font-family: PingFangSC-Semibold;
+          font-weight: 600;
+          color: rgba(0, 0, 0, 0.85);
+          line-height: 33px;
+      }
   }
-  
-  .ant-spin-container,
-  .ant-spin-nested-loading {
-    height: 100%;
-  }
-  
+}
+
+.ant-spin-container,
+.ant-spin-nested-loading {
+  height: 100%;
+}
+
+.footer {
+  text-align: center;
+  height: 20px;
+  font-size: 12px;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.45);
+  line-height: 20px;
+  margin: 48px 0 24px;
+  padding: 0 16px;
+}
+
+@media (min-width: 768px) {
+.bg {
+    background-image: url("../../assets/pic_login_bg.png");
+    background-position: center 0px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+}

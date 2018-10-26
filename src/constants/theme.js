@@ -3,9 +3,6 @@ const row_style = {
     gutter: {
         md: 8, lg: 24, xl: 48,
     },
-    style: {
-        marginBottom: 16,
-    },
 };
 // antd Row组件的样式
 const row_gutter = {

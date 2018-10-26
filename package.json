@@ -31,7 +31,7 @@
     "antd": "^3.10.1",
     "cross-env": "^5.2.0",
     "svg-sprite-loader": "^3.9.2",
-    "umi": "^2.1.2",
-    "umi-plugin-react": "^1.1.1"
+    "umi": "^2.2.1",
+    "umi-plugin-react": "^1.2.0"
   }
 }
