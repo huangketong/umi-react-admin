@@ -15,12 +15,11 @@ export default {
         setup({dispatch}) {
             dispatch({
                 type: 'query',
-                payload: {},
             });
         },
     },
     effects: {
-        *query({payload}, { put }) {
+        *query(_, { put }) {
             // 确认用户是否登录---尝试获取登录留下的token
             const token = localStorage.getItem('token');
             const userName = localStorage.getItem('userName');
