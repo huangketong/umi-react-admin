@@ -52,7 +52,6 @@
   |- global.less 约定的全局样式文件，自动引入
   |- PageLoadingComponent.js 
 |- .umirc.js umi 配置
-|- .umirc.mock.js 配合umi的mock入口
 |- package.json npm包管理
 |- theme-config.js 配置项目的antd主题
 ```
