@@ -12,7 +12,7 @@ export default {
         userName: '',
     },
     subscriptions: {
-        setup({dispatch}) {
+        setup({ dispatch }) {
             dispatch({
                 type: 'query',
             });
@@ -23,11 +23,11 @@ export default {
             // 确认用户是否登录---尝试获取登录留下的token
             const token = localStorage.getItem('token');
             const userName = localStorage.getItem('userName');
-            yield put({type: 'updateState', payload: {userName: userName}});
+            yield put({ type: 'updateState', payload: { userName: userName } });
             const location = window.location;
-            if ( token) {
+            if (token) {
                 if (location.pathname === '/login') {
-                    yield put(routerRedux.push({pathname: '/dashboard'}));
+                    yield put(routerRedux.push({ pathname: '/dashboard' }));
                 }
             } else {
                 const loginPage = '/login';

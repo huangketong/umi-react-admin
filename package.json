@@ -5,9 +5,9 @@
   "main": ".umirc.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "API_ENV=test PORT=8899 umi dev",
-    "build:test": "API_ENV=test umi build",
-    "build:prod": "API_ENV=prod umi build"
+    "dev": "cross-env API_ENV=test PORT=8899 umi dev",
+    "build:test": "cross-env API_ENV=test umi build",
+    "build:prod": "cross-env API_ENV=prod umi build"
   },
   "keywords": [
     "umi",

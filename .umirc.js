@@ -1,4 +1,4 @@
-import os from 'os';
+// import os from 'os';
 
 const routes = [
     {
@@ -57,7 +57,7 @@ export default {
                     include: ["dva", "dva/router", "dva/saga", "dva/fetch"],
                     exclude: ["@babel/runtime"]
                 },
-                hardSource: os.platform() === 'darwin',
+                // hardSource: os.platform() === 'darwin',
             }
         ]
     ],

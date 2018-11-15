@@ -276,7 +276,7 @@ export default class EditList extends Component {
 
         for (let i = 0; i < columnsConf.length; i++) {
             const target = data[columnsConf[i].key];
-            if (!ValidationInputIsEmpty(target, '请填写属性名称')) {
+            if (!ValidationInputIsEmpty(target, '请填写相应属性')) {
                 return;
             }
         }
