@@ -71,14 +71,34 @@ class Demo extends React.Component {
         });
     };
 
+    componentWillReceiveProps(nextProps, nextState) {
+      console.log(nextProps, nextState)
+      console.log(this.props.text)
+      // if(this.props.text !== nextProps.text) {
+      //   this.setState({
+      //     visible: true,
+      //   });
+      // }
+    }
+
+    // shouldComponentUpdate(nextProps, nextState) {
+    //   if(this.props.text === nextProps.text) {
+    //     return false
+    //   } else {
+    //     return true
+    //   }
+    // }
+
     render() {
         const { visible } = this.state;
-        const { treeData } = this.props;
+        const { treeData, text } = this.props;
+
+        console.log('text****', text)
 
         return (
             <div>
                 <Tree
-                    defaultExpandAll={true}
+                    defaultExpandAll={false}
                     onSelect={this.onSelect}
                     showLine={true}
                 >

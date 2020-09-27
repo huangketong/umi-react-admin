@@ -1,0 +1,72 @@
+
+.wrap {
+  .loadingWarp {
+    height: 400px;
+    padding: 50px;
+
+    .circle {
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      position: relative;
+
+      // 半透明圆圈
+      .loadingbg,
+      .loadingbg2 {
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        height: 100px;
+        width: 100px;
+        border: 5px solid @primary-color;
+        border-radius: 50%;
+        opacity: 0.4;
+      }
+
+      // 四分之一圆弧
+      .loading {
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        border: 5px solid transparent;
+        border-left-color: @primary-color;
+        // 动画名称和函数
+        animation: loading linear 1s infinite;
+        -webkit-animation: loading linear 1s infinite;
+      }
+
+      // 动画名称 loading
+      @keyframes loading {
+        // 设置过渡效果
+        from {
+          transform: rotate(0);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .loading2 {
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        border: 5px solid transparent;
+        border-left-color: @primary-color;
+        // 设置过渡效果 为 transform
+        transition-property: transform;
+        transition-duration: .6s;
+        transition-timing-function: linear;
+      }
+
+      .loading2:hover {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}

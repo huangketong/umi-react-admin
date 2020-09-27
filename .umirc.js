@@ -7,8 +7,9 @@ const routes = [
         routes: [
             { path: "/", component: "./index.js" },
             { path: "/dashboard", component: "./dashboard" },
-            { path: "/login", component: "/login" },
-            { path: "/scheduler", component: "/scheduler" }
+            { path: "/login", component: "./login" },
+            { path: "/scheduler", component: "./scheduler" },
+            { path: "/animation", component: "./animation" }
         ]
     }
 ];

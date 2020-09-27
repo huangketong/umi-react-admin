@@ -11,6 +11,11 @@ export default {
 
     },
     reducers: {
-
+        updateStates(state, {payload}){
+            return {
+                ...state,
+                ...payload
+            }
+        }
     },
 };

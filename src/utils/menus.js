@@ -17,4 +17,13 @@ export const menus = [
         route: '/scheduler',
         show_side: true,
     },
+    {
+        id: '3',
+        parent_id: '0',
+        name: '动画',
+        icon_id: 'smile',
+        level: '1',
+        route: '/animation',
+        show_side: true
+    }
 ];

@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'dva';
+import { Button } from 'antd';
 import Demo from './demo';
+import HockDemo from './hock';
+
 
 const Dashboard = ({
     dashboard, dispatch,
@@ -34,12 +37,25 @@ const Dashboard = ({
 
     const demoProps = {
         treeData: treeData,
+        text: text,
     };
+
+    const handleTest = useCallback(() => {
+        dispatch({
+            type: 'dashboard/updateStates',
+            payload: {
+                text: `${text}*`
+            }
+        })
+    }, [])
+
 
     return (
         <div>
+            <Button onClick={handleTest}>test</Button>
             <h2>{text}</h2>
             <Demo {...demoProps}/>
+            <HockDemo text={'11111'} handleTest={handleTest}/>
         </div>
     );
 };

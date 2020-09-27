@@ -23,15 +23,15 @@
     "moment": "^2.22.2",
     "nprogress": "^0.2.0",
     "path-to-regexp": "^2.2.1",
-    "prop-types": "^15.6.1",
+    "prop-types": "^15.7.2",
     "qs": "^6.5.0",
-    "rc-queue-anim": "^1.4.1"
+    "rc-queue-anim": "^1.6.12"
   },
   "devDependencies": {
-    "antd": "^3.10.1",
+    "antd": "^3.19.1",
     "cross-env": "^5.2.0",
     "svg-sprite-loader": "^3.9.2",
-    "umi": "^2.2.1",
-    "umi-plugin-react": "^1.2.0"
+    "umi": "^2.6.17",
+    "umi-plugin-react": "^1.7.6"
   }
 }
